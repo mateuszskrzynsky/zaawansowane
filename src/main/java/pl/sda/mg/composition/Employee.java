@@ -6,7 +6,7 @@ public class Employee {
     Salary salary;
     Address address;
 
-    public Salary getSalary() {
+    private Salary getSalary() {
         return salary;
     }
 

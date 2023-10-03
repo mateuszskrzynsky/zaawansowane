@@ -14,5 +14,6 @@ public class App {
         };
         anonimClaz.showDefault();
         anonimClaz.myMethod();
+        
     }
 }

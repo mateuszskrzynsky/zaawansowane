@@ -1,6 +1,5 @@
 package pl.sda.mg.oop.tasks;
 
-package pl.sda.mg.oop.zad2;
 
 public class AppTest {
     public static void main(String[] args) {

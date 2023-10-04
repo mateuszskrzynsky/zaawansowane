@@ -1,4 +1,5 @@
 package pl.sda.mg.generics.v3;
 
-public class Drink {
+public interface Drink {
+    String getName();
 }

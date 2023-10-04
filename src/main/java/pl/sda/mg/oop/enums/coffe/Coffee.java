@@ -1,4 +1,4 @@
-package pl.sda.mg.oop.enums;
+package pl.sda.mg.oop.enums.coffe;
 
 public enum Coffee {
 

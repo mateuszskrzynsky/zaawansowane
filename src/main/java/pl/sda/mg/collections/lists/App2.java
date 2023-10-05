@@ -1,4 +1,4 @@
-package pl.sda.mg.collections;
+package pl.sda.mg.collections.lists;
 
 import java.util.ArrayList;
 import java.util.Arrays;

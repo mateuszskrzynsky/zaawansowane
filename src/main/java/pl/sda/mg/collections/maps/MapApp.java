@@ -32,6 +32,6 @@ public class MapApp {
         System.out.println(cars);
         System.out.println("Rozmiar mapy"+cars.size());
 
-        
+
     }
 }

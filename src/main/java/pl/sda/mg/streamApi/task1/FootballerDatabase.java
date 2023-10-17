@@ -2,15 +2,17 @@ package pl.sda.mg.streamApi.task1;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
-public class FootballerDatabase implements FootballRepository{
+public
+class FootballerDatabase implements FootballRepository {
 
-    public static List<Footballer>footballers;
+    public static List<Footballer> footballers;
 
     static {
-           //generuje piłkarzy
-        footballers=getFootballers();
+        //generuje piłkarzy
+        footballers = getFootballers();
     }
 
     private static List<Footballer> getFootballers() {
@@ -163,7 +165,7 @@ public class FootballerDatabase implements FootballRepository{
 
 
     @Override
-    public List<Footballer> add(Footballer footballer){
+    public List<Footballer> add(Footballer footballer) {
         return null;
     }
 
@@ -173,8 +175,12 @@ public class FootballerDatabase implements FootballRepository{
     }
 
     @Override
-    public List<Footballer> findByLastName(Footballer footballer) {
-        return null;
+    public List<Footballer> findByLastName(String lastName) {
+        return footballers.stream()
+                .filter(footballer -> footballer.getLastName().equalsIgnoreCase(lastName))
+                .collect(Collectors.toList());
+
+
     }
 
     @Override
@@ -193,4 +199,19 @@ public class FootballerDatabase implements FootballRepository{
         return footballers;
     }
 
+    @Override
+    public List<Footballer> findByCity(String city) {
+        return footballers.stream()
+                .filter(footballer -> footballer.getAddress().getCity().equals(city))
+                .collect(Collectors.toList());
+    }
+
+    //@Override
+    //public Set<String> uniqueClubs(String club) {
+    //    Set<String> footballerStream = footballers.stream()
+    //           .flatMap(footballer -> footballer.getPreviousClubs().stream())
+    //           .map(club -> club.getClubName())
+    //          .collect(Collectors.toSet());
+    //  return footballerStream;
+    //}
 }

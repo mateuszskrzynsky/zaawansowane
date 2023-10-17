@@ -6,6 +6,14 @@ public class App {
         System.out.println(repository.findAll());
         System.out.println("****************");
         System.out.println(repository.findByClub("FC Barcelona"));
+        System.out.println("****************");
+        System.out.println(repository.findByLastName("Messi"));
+        System.out.println("****************");
+        System.out.println(repository.findByCity("Paris"));
+        System.out.println("*********************");
+        //System.out.println(repository.uniqueClub());
+
+
 
     }
 }

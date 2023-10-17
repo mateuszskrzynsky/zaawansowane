@@ -11,7 +11,7 @@ public class Footballer {
     private String firstName;
     private String lastName;
     private Integer birthYear;
-    private County nationality;
+    private Country nationality;
     private MarketStatus marketStatus;
     private Address address;
     private List<Club> previousClubs;
